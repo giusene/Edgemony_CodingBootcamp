@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercitazione</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" media="all" href="css/normalize.css">
+    <link rel="stylesheet" media="all" href="css/common.css">
+</head>
+<body>
+    <header>
+        <h1>Esercitazione</h1>
+        <h2>21 ottobre 2021</h2>
+    </header>
+    <section>
+        <div class="esercizio">
+            <h3>Primo Esercizio</h3>
+            <p>Uso gli <b>Array</b> i <b>Cicli</b> e le <b>Funzioni</b> per creare un applicazione stile rubrica</p>
+            <a class="button" href="javascript:add();">Aggiungi</a>
+            <a class="button" href="javascript:find();">Cerca</a>
+            <a class="button" href="javascript:view();">Visualizza</a>
+        </div>
+
+        <div class="esercizio">
+            <h3>Secondo Esercizio</h3>
+            <p>Questa applicazione aggiunge elementi al carrello che vanno a popolare un array</p>
+            <form id="form_carrello">
+                <input type="text" id="prodotto" name="prodotto" placeholder="inserisci prodotto">
+                <input type="number" id="quantita" name="quantita" class="number" placeholder="Q.tà">
+                <button type="button" class="button" onclick="javascript:addToCart(prodotto.value,quantita.value);">+</button>
+            </form>
+            <a class="button" href="javascript:viewCart();">Visualizza Carrello</a>
+        </div>
+     
+        
+    </section>
+
+    <footer><p>esercitazione realizzata da <a href="https://www.linkedin.com/in/giuseppe-senettone-a9677246/" target="_blank">Giuseppe Senettone</a></p></footer>
+    
+</body>
+</html>
+<script src="js/app.js"></script>

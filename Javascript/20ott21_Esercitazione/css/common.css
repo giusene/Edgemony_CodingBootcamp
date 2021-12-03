@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+h1, h2 {
+    font-family: 'Bebas Neue', cursive;
+    margin: 0;
+}
+
+header {
+    text-align: center;
+    background: #ccc;
+    padding: 40px 20px;
+    height: 150px;
+}
+
+section {
+    min-height: calc(100vh - 250px);
+    padding: 40px;
+    overflow-y: auto;
+}
+
+section .esercizio {
+    padding: 20px 40px;
+    background: #333;
+    color: #fff;
+    margin-bottom: 20px;
+
+}
+
+.button{
+    background: #000;
+    padding: 10px 20px;
+    display: inline-block;
+    color: #fff;
+    margin-top: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease-out;
+}
+
+.button:hover{
+    background: #fff;
+    color: #000;
+}
+
+
+
+footer {
+    text-align: center;
+    background: #000;
+    color: #fff;
+    height: 100px;
+    line-height: 100px;
+}
+
+footer a{
+    color: #fff;
+}
+
+footer a:hover{
+    color: #fff;
+    text-decoration: none;
+}

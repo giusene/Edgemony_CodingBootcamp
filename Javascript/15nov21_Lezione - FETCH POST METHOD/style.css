@@ -1,0 +1,85 @@
+body {
+    font-family: sans-serif;
+}
+
+main {
+    width: 85%;
+    margin: 30px auto;
+}
+
+hr {
+    border: 0;
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, black));
+    height: 2px;
+    margin: 20px 0;
+}
+
+footer {
+    margin-top: 20px;
+}
+
+#add {
+    padding: 10px;
+    background-color: #eee;
+    border: 1px solid #aaa;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.35s linear;
+}
+
+#add:hover {
+    background-color: goldenrod;
+    color: #fff;
+}
+
+#create{
+    width: 500px;
+    margin: 20px auto;
+    font-size: 16px;
+}
+
+#create label{
+    display: block;
+}
+
+#create input, #create textarea{
+    display: block;
+    width: 100%;
+    padding: 4px;
+    outline: none;
+    border: 2px solid #aaa;
+    transition: all 0.35s;
+} 
+
+#create textarea{
+    resize: vertical;
+    min-height: 200px;
+} 
+
+#create input:focus, #create textarea:focus{
+    border: 2px solid goldenrod;
+    box-shadow: 0px 0px 20px goldenrod;
+} 
+
+#create .row{
+    margin: 10px 0;
+}
+
+.loading {
+    color: #aaa;
+    padding: 15px;
+    border: 1px dashed #aaa;
+    animation-name: pulse;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes pulse {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0.4;
+    }
+}

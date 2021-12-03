@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercitazione Calcolatrice</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" media="all" href="css/normalize.css">
+    <link rel="stylesheet" media="all" href="css/common.css">
+</head>
+<body>
+    <header>
+        <h1>Esercitazione Calcolatrice</h1>
+        <h2>26 ottobre 2021</h2>
+    </header>
+    <section>
+        <div class="calculator">
+            <div class="display_mini" id="display_mini"></div>
+            <div class="display" id="display"></div>
+            <div class="btn_set">
+                <a id="rad" href="javascript:rad()" class="sign">√</a>
+                <a id="nx" href="javascript:operationChoice(nx, 'nx')" class="sign">n<sup>X</sup></a>
+                <a id="n2" href="javascript:n2()" class="sign">n<sup>2</sup></a>
+                <a id="clear" href="javascript:clear()" class="sign">C</a>
+                <a id="seven" href="javascript:displayInput('7')">7</a>
+                <a id="eight" href="javascript:displayInput('8')">8</a>
+                <a id="nine" href="javascript:displayInput('9')">9</a>
+                <a id="div" href="javascript:operationChoice(div, 'div')" class="sign">/</a>
+                <a id="four" href="javascript:displayInput('4')">4</a>
+                <a id="five" href="javascript:displayInput('5')">5</a>
+                <a id="six" href="javascript:displayInput('6')">6</a>
+                <a id="mult" href="javascript:operationChoice(mult, 'mult')" class="sign">x</a>
+                <a id="one" href="javascript:displayInput('1')">1</a>
+                <a id="two" href="javascript:displayInput('2')">2</a>
+                <a id="three" href="javascript:displayInput('3')">3</a>
+                <a id="sub" href="javascript:operationChoice(sub, 'sub')" class="sign">-</a>
+                <a id="zero" href="javascript:displayInput('0')">0</a>
+                <a id="dot" href="javascript:displayInput('.')">.</a>
+                <a id="tot" href="javascript:calculator()" class="sign">=</a>
+                <a id="sum"  class="sign">+</a>
+            </div>
+        </div>
+
+    </section>
+    <footer>
+        <p>esercitazione realizzata da <a href="https://www.linkedin.com/in/giuseppe-senettone-a9677246/" target="_blank">Giuseppe Senettone</a></p>
+    </footer>
+    <script src="js/calculator.js"></script>
+</body>
+</html>

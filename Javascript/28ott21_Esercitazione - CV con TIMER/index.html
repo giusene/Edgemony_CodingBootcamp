@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinamic Curriculum</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="noScroll">
+    <header>
+        <h1>Nome e Cognome</h1>
+        <h2>Frontend Developer</h2>
+        <div class="nightModeBtn">
+            <span class="sun">☀️</span>
+            <span class="moon pulse">🌙</span>
+             <p>Nightmode: <span class="nightText">DISABLED</span></p>
+        </div>
+    </header>
+    <section>
+        <h3>Skills</h3>
+        <div class="flex-container">
+            <div class="skill">
+                <h4>Html</h4>
+                <div class="blankBar">
+                    <div class="redBar" id="htmlBar"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <h4>Css</h4>
+                <div class="blankBar">
+                    <div class="redBar" id="cssBar"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <h4>Javascript</h4>
+                <div class="blankBar">
+                    <div class="redBar" id="javascriptBar"></div>
+                </div>
+            </div>
+
+        </div>
+        <div class="about">
+            <h3>About you</h3>
+            <div class="dinamicAbout">
+
+            </div>
+        </div>
+
+    </section>
+    <footer>
+        <p>esercitazione realizzata da <a href="https://www.linkedin.com/in/giuseppe-senettone-a9677246/" target="_blank">Giuseppe Senettone</a></p>
+    </footer>
+    
+    <div class="introPopUp">
+        <div class="popUp">
+            <h3>Compila il tuo CV</h3>
+            <form id="formInput">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name">
+                <label for="surname">Cognome:</label>
+                <input type="text"  id="surname" name="surname">
+                <label for="job">Qualifica:</label>
+                <input type="text"  id="job" name="job">
+                <div class="flexForm">
+                    <div class="flex1">
+                            <h4>Skills</h4>
+                            <label for="html">Html Level:</label>
+                            <select id="html">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+
+                            <label for="css">Css Level:</label>
+                            <select id="css">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+
+                            <label for="javascript">Javascript Level:</label>
+                            <select id="javascript">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                    </div>
+                    <div class="flex2">
+                        <h4>About you</h4>
+                        <textarea id="about" name="about"></textarea>
+                    </div>
+                </div>
+            </form>
+            <a id="send" class="button">INVIA</a>
+
+           
+            
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>

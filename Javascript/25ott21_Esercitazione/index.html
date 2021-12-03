@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercitazione</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" media="all" href="css/normalize.css">
+    <link rel="stylesheet" media="all" href="css/common.css">
+</head>
+<body>
+    <header>
+        <h1>Esercitazione</h1>
+        <h2>25 ottobre 2021</h2>
+    </header>
+    <section>
+        <div class="flex-container">
+            <div class="box">
+                <h3>Esercizio 1</h3>
+                <h4>Dato il seguente 'snippet', qual'è il risultato dei console.log?</h4>
+                <textarea class="text_ex1" readonly>const PI = 3.14;
+console.log(PI);
+if (PI >= 3) {
+    console.log(PI);
+}  
+                </textarea>
+                <div class="risposte">
+                    <form id="domanda1">
+                        <div class="opzioni">
+                            <input type="radio" id="risposta1" name="domanda1" value="1">Risposta 1
+                            <div class="alternative">
+                                <span>></span> 3.14
+                            </div>
+                        </div>
+                        <div class="opzioni">
+                            <input type="radio" id="risposta2" name="domanda1" value="2">Risposta 2
+                            <div class="alternative">
+                                <span>></span> 3.14<br>
+                                <span>></span> 3.14
+                            </div>
+                        </div>
+                    </form>
+                    <div id="esito1"></div>
+                    <a href="javascript:answer1(risposta1,risposta2 )" class="button">VERIFICA</a>
+                </div>
+            </div>
+            <div class="box">
+                <h3>Esercizio 2</h3>
+                <h4>Dato il seguente 'snippet', qual'è il risultato dei console.log?</h4>
+                <textarea class="text_ex1" readonly>var favColour = "violet";
+let monthsInAYear = 12;              
+if (true) {
+    var favColour = "violet";
+    console.log("Il mio colore preferito è:",
+    favColour);
+}
+console.log("Ci sono", monthsInAYear, "mesi in un anno.");
+                </textarea>
+                <div class="risposte">
+                    <form id="domanda2">
+                        <div class="opzioni">
+                            <input type="radio" id="risposta3" name="domanda2" value="1">Risposta 1
+                            <div class="alternative">
+                                <span>></span> Il mio colore preferito è: violet<br>
+                                <span>></span> Ci sono <span>12</span> mesi in un anno.
+                            </div>
+                        </div>
+                        <div class="opzioni">
+                            <input type="radio" id="risposta4" name="domanda2" value="2">Risposta 2
+                            <div class="alternative">
+                                <span>></span> <span class="error">Uncaught ReferenceError:</span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="esito2"></div>
+                    <a href="javascript:answer2(risposta3, risposta4)" class="button">VERIFICA</a>
+                </div>
+            </div>
+            <div class="box">
+                <h3>Esercizio 3</h3>
+                <h4>Dato il seguente 'snippet', qual'è il risultato dei console.log?</h4>
+                <textarea class="text_ex1" readonly>function makePizza(moreIngredients) {
+    let theSecond = "Sugo di pomodoro freschissimo";
+    // { ... }
+    console.log(theSecond + ", " + moreIngredients);
+    return true;
+    }
+if (true) {
+    makePizza("rucola, prosciutto crudo e scaglie di grana.");
+    console.log("Il secondo ingrediente necessario: ", theSecond);
+}
+                </textarea>
+                <div class="risposte">
+                    <form id="domanda3">
+                        <div class="opzioni">
+                            <input type="radio" id="risposta5" name="domanda3" value="1">Risposta 1
+                            <div class="alternative">
+                                <span>></span> Sugo di pomodoro freschissimo, rucola, prosciutto crudo e scaglie di grana.<br>
+                                <span>></span> <span class="error"> Uncaught ReferenceError: theSecond is not defined</span>
+                            </div>
+                        </div>
+                        <div class="opzioni">
+                            <input type="radio" id="risposta6" name="domanda3" value="2">Risposta 2
+                            <div class="alternative">
+                                <span>></span> Sugo di pomodoro freschissimo, rucola, prosciutto crudo e scaglie di grana.<br>
+                                <span>></span> Il secondo ingrediente necessario: Sugo di pomodoro freschissimo
+                            </div>
+                        </div>
+                    </form>
+                    <div id="esito3"></div>
+                    <a href="javascript:answer3(risposta5, risposta6)" class="button">VERIFICA</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer><p>esercitazione realizzata da <a href="https://www.linkedin.com/in/giuseppe-senettone-a9677246/" target="_blank">Giuseppe Senettone</a></p></footer>
+</body>
+</html>
+<script src="js/app.js"></script>

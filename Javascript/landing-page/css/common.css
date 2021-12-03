@@ -1,0 +1,269 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+}
+
+a {
+    color: #ccc;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+    color: #4e3939;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Pacifico', cursive;
+    color: #ee7560;
+}
+
+.pulsante {
+    background: #ee7560;
+    border: 2px solid #ee7560;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 30px;
+    font-size: 20px;
+    line-height: 30px;
+    border-radius: 10px;
+    margin-top: 20px;
+    display: inline-block;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+}
+
+.pulsante:hover {
+    background: #fff;
+    color: #ee7560;
+    padding: 15px 35px;
+}
+
+/* header */
+header {
+    background-color: #fff;
+    padding: 10px 0;
+}
+
+header img{
+    margin: 0 auto;
+}
+
+/* hero */
+#hero img{
+    width: 100%;
+    height: auto;
+}
+
+/* testo */
+#testo {
+    width: 100%;
+    max-width: 990px;
+    margin: 0 auto;
+    padding: 100px 50px;
+    text-align: center;
+}
+
+#testo h1 {
+    font-size: 50px;
+    line-height: 70px;
+    padding-bottom: 20px;
+}
+
+/* vantaggi */
+#vantaggi {
+    background: #f8f3f0;
+    padding: 100px 50px;
+}
+
+
+#vantaggi .flex-container{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+#vantaggi .flex-container .flex-item{
+    padding: 20px;
+    width: calc(100% / 3);
+    text-align: center;
+    border: 1px solid #e7560d;
+    border-radius: 10px;
+}
+
+#vantaggi .flex-container .flex-item:nth-child(2n){
+    background: #fff;
+}
+
+
+#vantaggi .flex-container .flex-item h2{
+    font-size: 30px;
+    padding: 0 0 10px;
+}
+
+/* form */
+#form {
+    width: 100%;
+    max-width: 990px;
+    margin: 0 auto;
+    padding: 100px 50px;
+}
+
+#form h2{
+    text-align: center;
+    padding: 0 0 20px;
+    font-size: 40px;
+    line-height: 50px;
+}
+
+#form .flex-form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#form .flex-form .inputDiv{
+    width: 33.3%;
+    padding: 20px;
+    text-align: center;
+}
+
+#form .flex-form .inputDiv.larghezza100{
+    width: 100%;
+}
+
+#form .flex-form .inputDiv input[type="text"],
+#form .flex-form .inputDiv input[type="email"],
+#form .flex-form .inputDiv textarea,
+#form .flex-form .inputDiv select {
+    width: 100%;
+    display: block;
+    background: #fafafa;
+    border-radius: 5px;
+    padding: 15px;
+    border: none;
+    /* elimina il focus nel box */
+    outline: none;
+}
+
+#form .flex-form .inputDiv select {
+    color: black;
+}
+
+.seleziona { 
+    color: gray; 
+}
+
+#form .flex-form .inputDiv textarea {
+    resize: none;
+    height: 100px;
+}
+
+#form .flex-form .inputDiv label {
+    display: block;
+    text-align: left;
+    font-size: 12px;
+    padding: 0px 15px 10px;
+    color: gray;
+}
+
+/* privacy */
+#form .radioDiv {
+    width: 100%;
+    padding: 20px;
+}
+
+#form .radioDiv p{
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0 15px 5px;
+}
+
+#form .radioDiv p a{
+    color: #ee7560;
+}
+
+#form .radioDiv p a:hover{
+    text-decoration: none;
+}
+
+#form .flex-form .radioDiv label {
+    text-align: left;
+    font-size: 14px;
+    padding: 0 15px 5px;
+}
+
+/* footer */
+footer {
+    background: #000;
+    padding: 100px 50px;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+}
+
+footer a{
+    color: #fff;
+}
+
+
+/* visualizzazione massima tablet landscape */
+@media all and (max-width: 990px) {
+    body {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    header img {
+        width: 100px;
+        height: auto;
+    }
+
+    #testo {
+        padding: 50px 20px;
+    }
+    
+    #testo h1 {
+        font-size: 30px;
+        line-height: 50px;
+        padding-bottom: 10px;
+    }
+
+    #vantaggi {
+        padding: 50px 20px;
+    }
+
+    #vantaggi .flex-container .flex-item{
+        width: 100%;
+    }
+
+    #form {
+        padding: 50px 20px;
+    }
+    
+    #form h2{
+        padding: 0 0 10px 0;
+        font-size: 30px;
+    }
+    
+    #form .flex-form .inputDiv{
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    footer {
+        padding: 50px 20px;
+    }
+
+}
