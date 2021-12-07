@@ -1,12 +1,12 @@
 const fs = require("fs").promises;
 const fsTest = require("fs");
 
-const path = './data.json';
+const fileName = './data.json';
 
 const arguments = process.argv.slice(2);
 let localArray = []
 
-async function readFile(file) {
+async function readingFunction(file) {
     localArray = await fs.readFile(file);
     await pushingFunction(file, JSON.parse(localArray));
 }
@@ -18,23 +18,22 @@ const productObj = {
 
 const pushingFunction = (file, arr) => {
     arr.push(productObj);
-    writeFile(file, arr)
+    writingFunction(file, arr)
 }
 
-async function writeFile(file, content) {
+async function writingFunction(file, content) {
     await fs.writeFile(file, JSON.stringify(content));
     await renderFunction(content)
 }
 
-if (fsTest.existsSync(path)) {
-    readFile(path);
+if (fsTest.existsSync(fileName)) {
+    readingFunction(fileName);
 } else {
-    pushingFunction(path, localArray)
+    pushingFunction(fileName, localArray)
 }
 
 
 function renderFunction(content) {
- 
     const list = content.map(element => {
         const liList = ` <li>${element.qty} - ${element.name}</li>`;
         return liList;
@@ -52,7 +51,7 @@ function renderFunction(content) {
 <body>
     <h1>Lista della Spesa</h1>
     <ul class="list">
-    ${list.join('')}
+    ${list.join('\n')}
     </ul>
 </body>
 </html>`;
