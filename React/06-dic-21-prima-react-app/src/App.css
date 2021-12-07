@@ -1,0 +1,47 @@
+.App {
+  text-align: center;
+}
+
+main{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.profile-img {
+  height: 150px;
+  width: auto;
+  pointer-events: none;
+}
+
+
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 1vmin);
+  color: rgb(0, 0, 0);
+  padding: 20px;
+}
+
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+  align-items: flex-start;
+}
+
+.column{
+  text-align: center;
+  width: calc(100vw/3);
+  padding: 0px 20px;
+}
+
+footer {
+  text-align: center;
+}
