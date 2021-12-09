@@ -1,0 +1,13 @@
+.card-img {
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-img img {
+    height: 180px;
+}

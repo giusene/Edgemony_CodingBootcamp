@@ -1,0 +1,14 @@
+h3{
+    margin: 0px;
+}
+.card {
+    max-width: 200px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: #fff;
+    overflow: hidden;
+    color: #000;
+    text-align: left;
+    font-size: 9px;
+}
+
