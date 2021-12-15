@@ -10,6 +10,7 @@ function App() {
     <div>
       <AddVAT value={value} vat={vat} />
       <p>prova</p>
+      <p>prova 2</p>
     </div>
   );
 }
