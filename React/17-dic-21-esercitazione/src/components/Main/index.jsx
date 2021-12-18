@@ -10,17 +10,16 @@ const INIT_STATE = {
     dataList: [],
 }
 
+const newData = [];
+
 const reducer = (state, action) => {
     switch (action.type) {
-        case 'init':
-            http().then((data) => { state.dataList = [data] })
-            return {...state}
         case 'add':
-            http().then((data) => { state.dataList.push(data) });
-            console.log(state.dataList)
-            return {...state};
+            state.dataList.push(...newData);
+            newData.length = 0;
+            return { ...state };
         case 'reset':
-            return {...state, dataList: [] };
+            return { ...state, dataList: [] };
         default:
             return state;
     }
@@ -29,18 +28,25 @@ const reducer = (state, action) => {
 const Main = () => {
     const [state, dispatch] = useReducer(reducer, INIT_STATE);
 
+    const pushFunction = (dispatchType) => {
+        http().then((data) => { newData.push(data) })
+            .then(() => { dispatch({ type: dispatchType }) })
+    }
+
     useEffect(() => {
-        dispatch({ type: 'init' })
+        pushFunction('add');
     }, []);
 
     return (
-        
+
         <div className={styles.main}>
-            <button onClick={() => dispatch({ type: 'add' })} className={styles.button}>{state.buttonAdd}</button>
-            <button onClick={() => dispatch({ type: 'reset' })} className={styles.button}>{state.buttonReset}</button>
+            <div className={styles.buttonWrapper}>
+                <button onClick={() => pushFunction('add')} className={styles.button}>{state.buttonAdd}</button>
+                <button onClick={() => dispatch({ type: 'reset' })} className={styles.button}>{state.buttonReset}</button>
+            </div>
 
             {state.dataList.map((item, index) => (
-                <RenderData key={index} text={item.text} url={item.permalink} num={index+1} />
+                <RenderData key={index} text={item.text} url={item.permalink} num={index + 1} />
             ))}
         </div>
     )

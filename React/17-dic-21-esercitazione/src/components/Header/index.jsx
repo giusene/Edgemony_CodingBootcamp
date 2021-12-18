@@ -1,9 +1,9 @@
 import styles from './Header.module.scss'
 
-const Header = () => {
+const Header = (props) => {
     return (
         <div className={styles.header}>
-            header
+            <h1>{props.title}</h1>
         </div>
     )
 }
